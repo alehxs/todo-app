@@ -8,6 +8,11 @@
 
     function formSubmitted(e: SubmitEvent) {
         e.preventDefault();
+
+        if (!newTask.trim()) {
+            return;
+        }
+
         addTask(newTask);
         newTask = "";
     }
